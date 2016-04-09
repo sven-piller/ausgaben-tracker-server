@@ -31,3 +31,13 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# Visual Studio
+obj/
+.ntvs_analysis.dat
+*.sln
+*.etl
+*.tmp
+*.vspx
+*.njsproj
+
