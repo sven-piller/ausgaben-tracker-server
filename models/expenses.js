@@ -1,4 +1,5 @@
-﻿var mongoose = require('mongoose');
+﻿/// <reference path="../typings/main.d.ts" />
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
 var timestamps = require("mongoose-times");
