@@ -52,6 +52,7 @@ router.post('/authenticate', function(req, res) {
 
 router.use(function(req, res, next) {
     console.log('Anfrage an die API');
+    /*
     var token = req.body.token || req.param('token') || req.headers['x-access-token'];
     if (token) {
         jwt.verify(token, superSecret, function (err, decoded) {
@@ -70,9 +71,9 @@ router.use(function(req, res, next) {
             success: false,
             message: 'No token provided.'
         });
-    }
+    }*/
         
-    // next();
+    next();
 });
 
 router.get('/me', function (req, res) {
@@ -171,7 +172,7 @@ router.route('/expenses')
 })
 
 .get(function(req, res) {
-	Expense.find(function(err, expenses) {
+	Expense.find({},function(err, expenses) {
 		if (err) res.send(err);
 		res.json(expenses);
 	});

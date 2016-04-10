@@ -1,5 +1,5 @@
 ﻿#!/usr/bin/env node
-/// <reference path="../../typings/node/node.d.ts"/>
+
 var debug = require('debug')('Server');
 var app = require('../app');
 

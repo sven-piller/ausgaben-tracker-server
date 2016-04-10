@@ -1,5 +1,4 @@
-﻿/// <reference path="typings/node/node.d.ts"/>
-
+﻿
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -18,7 +17,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
