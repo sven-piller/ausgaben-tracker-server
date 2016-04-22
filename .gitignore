@@ -41,3 +41,5 @@ obj/
 *.vspx
 *.njsproj
 
+# DefinatlyTyped
+typings

@@ -11,7 +11,9 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var usersRouter = require('./routes/users');
-var apiRouter = require('./routes/apiRoute.js');
+var apiRouter = require('./routes/apiRoute');
+
+var log = require('./utils/log');
 
 var app = express();
 
@@ -31,6 +33,12 @@ app.use(cors());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//log.log('Nachricht');
+//log.logInfo('Nachricht', 'app.js');
+//log.logError('Nachricht', 'app.js');
+//log.logWarning('Nachricht', 'app.js');
+//log.handle(Promise.reject(new Error("fail")), {verbose: true});
+//log.handleError(new Error('Custom Error'), {verbose: true});
 
 // basic route
 app.use('/', routes);
